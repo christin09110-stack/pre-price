@@ -1,0 +1,3 @@
+raw second create -> 422 {"field":"/detail/invoice_number","value":"DUPMUQCJCJ1","location":"body","issue":"DUPLICATE_INVOICE_NUMBER","description":"Invoice number is duplicate."}
+createInvoiceOnce after duplicate -> returned existing invoice INV2-BTTM-2XJE-5NZZ-6455
+invoices with number DUPMUQCJCJ1: 1

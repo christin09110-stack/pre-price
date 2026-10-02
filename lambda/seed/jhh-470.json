@@ -1,0 +1,700 @@
+{
+ "id": "jhh-470",
+ "seed": {
+  "id": "jhh-470",
+  "hospital": "jhh",
+  "label": "Total knee replacement, inpatient",
+  "short": "Knee replacement",
+  "codeLabel": "MS-DRG 470",
+  "target": {
+   "codes": [
+    "470"
+   ],
+   "types": [
+    "MS-DRG"
+   ],
+   "keywords": "/joint replacement|knee/i"
+  }
+ },
+ "hospitalInfo": {
+  "name": "The Johns Hopkins Hospital",
+  "city": "Baltimore, MD",
+  "url": "https://jhm-web-assets.s3.amazonaws.com/hopkinsmedicine/prod/charge-fees/520591656_JohnsHopkinsHospital_standardcharges.csv",
+  "format": "CMS v2.2.0 \"tall\" CSV, updated 2025-07-01",
+  "sizeMB": 11.7,
+  "mess": "Inpatient prices are payer \"algorithms\" with an estimated amount per plan. No cash price and no gross charge for the knee-replacement DRG."
+ },
+ "extractedAt": "2026-10-02T02:02:24.583Z",
+ "status": "partial",
+ "procedure": {
+  "code": "470",
+  "code_system": "MS-DRG",
+  "description": "Major Hip And Knee Joint Replacement Or Reattachment Of Lower Extremity Without Mcc",
+  "setting": "inpatient"
+ },
+ "quote": {
+  "scope": "facility_total",
+  "amount": null,
+  "amount_row_id": null,
+  "amount_field": null,
+  "basis": "The file provides only payer-specific estimated amounts for MS-DRG 470, ranging from $26,612.02 to $87,530.76. No self-pay or discounted cash price is listed. These are facility-total estimates for the inpatient stay, but each is tied to a specific insurance plan's algorithm."
+ },
+ "gross_charge": null,
+ "self_pay_price": null,
+ "min_rate": {
+  "value": 26612.02,
+  "row_id": "A.r1",
+  "field": "standard_charge|min",
+  "cell": "26612.02",
+  "line": 18577
+ },
+ "max_rate": {
+  "value": 87530.76,
+  "row_id": "A.r1",
+  "field": "standard_charge|max",
+  "cell": "87530.76",
+  "line": 18577
+ },
+ "negotiated_rates": [
+  {
+   "payer": "Aetna Med Adv",
+   "plan": "Aetna Medicare Ppo",
+   "value": 83508.91,
+   "row_id": "A.r1",
+   "field": "estimated_amount",
+   "kind": "estimated_allowed_amount",
+   "cell": "83508.91",
+   "line": 18577
+  },
+  {
+   "payer": "Blue Cr/Sh Out-Of-State",
+   "plan": "Bcbs Out-Of-State Ppo Other",
+   "value": 47967.05,
+   "row_id": "A.r2",
+   "field": "estimated_amount",
+   "kind": "estimated_allowed_amount",
+   "cell": "47967.05",
+   "line": 18578
+  },
+  {
+   "payer": "Carefirst Admin",
+   "plan": "Carefirst Administrators Jhu Only",
+   "value": 87530.76,
+   "row_id": "A.r3",
+   "field": "estimated_amount",
+   "kind": "estimated_allowed_amount",
+   "cell": "87530.76",
+   "line": 18579
+  },
+  {
+   "payer": "Carefirst Blue Choice",
+   "plan": "Blue Cr/Sh Natl Accts Bluechoice",
+   "value": 45456.15,
+   "row_id": "A.r4",
+   "field": "estimated_amount",
+   "kind": "estimated_allowed_amount",
+   "cell": "45456.15",
+   "line": 18580
+  },
+  {
+   "payer": "Carefirst Blue Choice",
+   "plan": "Carefirst Blue Choice Open Access",
+   "value": 49377.72,
+   "row_id": "A.r5",
+   "field": "estimated_amount",
+   "kind": "estimated_allowed_amount",
+   "cell": "49377.72",
+   "line": 18581
+  },
+  {
+   "payer": "Carefirst Blue Choice",
+   "plan": "Carefirst Blue Choice Hmo",
+   "value": 27557.31,
+   "row_id": "A.r6",
+   "field": "estimated_amount",
+   "kind": "estimated_allowed_amount",
+   "cell": "27557.31",
+   "line": 18582
+  },
+  {
+   "payer": "Medicaid Maryland",
+   "plan": "Maryland Medical Assistance",
+   "value": 53855.38,
+   "row_id": "A.r7",
+   "field": "estimated_amount",
+   "kind": "estimated_allowed_amount",
+   "cell": "53855.38",
+   "line": 18583
+  },
+  {
+   "payer": "Priority Partners",
+   "plan": "Priority Partners Mco New 9/2022",
+   "value": 31666.74,
+   "row_id": "A.r8",
+   "field": "estimated_amount",
+   "kind": "estimated_allowed_amount",
+   "cell": "31666.74",
+   "line": 18584
+  },
+  {
+   "payer": "United Healthcare",
+   "plan": "United Mdipa/Optimum Choice Hmo",
+   "value": 26612.02,
+   "row_id": "A.r9",
+   "field": "estimated_amount",
+   "kind": "estimated_allowed_amount",
+   "cell": "26612.02",
+   "line": 18585
+  },
+  {
+   "payer": "United Healthcare Med Adv",
+   "plan": "United Healthcare Grp Ind Med Adv Ppo",
+   "value": 43591.54,
+   "row_id": "A.r10",
+   "field": "estimated_amount",
+   "kind": "estimated_allowed_amount",
+   "cell": "43591.54",
+   "line": 18586
+  }
+ ],
+ "not_in_file": [
+  "Surgeon professional fees",
+  "Anesthesiologist professional fees",
+  "Implant costs (knee prosthesis)",
+  "Physical therapy",
+  "Post-discharge care"
+ ],
+ "problems": [
+  "No gross charge listed for MS-DRG 470",
+  "No self-pay or discounted cash price available for uninsured patients",
+  "All amounts are algorithm-based estimates, not fixed contracted rates"
+ ],
+ "confidence": "high",
+ "grounding": {
+  "checked": 12,
+  "verified": 12,
+  "removed": []
+ },
+ "hospital": "The Johns Hopkins Hospital",
+ "procedureLabel": "Major Hip And Knee Joint Replacement Or Reattachment Of Lower Extremity Without Mcc",
+ "scan": {
+  "records": 31225,
+  "bytes": 11665882,
+  "columns": 24,
+  "rowsKept": 23,
+  "headerLine": 3,
+  "ms": 26483
+ },
+ "usage": {
+  "inputTokens": 11299,
+  "outputTokens": 1784
+ },
+ "model": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+ "rows": [
+  {
+   "id": "A.r1",
+   "line": 18577,
+   "kind": "code_match",
+   "cells": {
+    "description": "Major Hip And Knee Joint Replacement Or Reattachment Of Lower Extremity Without Mcc",
+    "code|1": "470",
+    "code|1|type": "MS-DRG",
+    "setting": "inpatient",
+    "payer_name": "Aetna Med Adv",
+    "plan_name": "Aetna Medicare Ppo",
+    "standard_charge|negotiated_algorithm": "Conditional payment logic at the claim level including numerous contracting methods, hierarchical applications, and service utilization requirements.",
+    "estimated_amount": "83508.91",
+    "standard_charge|methodology": "other",
+    "standard_charge|min": "26612.02",
+    "standard_charge|max": "87530.76",
+    "additional_generic_notes": "Contracting method is an algorithm described in the 'standard_charges|algorithm' field. The estimated allowed amount provided accounts for the structural rates, conditions, and utilization elements inherent in the payer’s algorithm."
+   }
+  },
+  {
+   "id": "A.r2",
+   "line": 18578,
+   "kind": "code_match",
+   "cells": {
+    "description": "Major Hip And Knee Joint Replacement Or Reattachment Of Lower Extremity Without Mcc",
+    "code|1": "470",
+    "code|1|type": "MS-DRG",
+    "setting": "inpatient",
+    "payer_name": "Blue Cr/Sh Out-Of-State",
+    "plan_name": "Bcbs Out-Of-State Ppo Other",
+    "standard_charge|negotiated_algorithm": "Conditional payment logic at the claim level including numerous contracting methods, hierarchical applications, and service utilization requirements.",
+    "estimated_amount": "47967.05",
+    "standard_charge|methodology": "other",
+    "standard_charge|min": "26612.02",
+    "standard_charge|max": "87530.76",
+    "additional_generic_notes": "Contracting method is an algorithm described in the 'standard_charges|algorithm' field. The estimated allowed amount provided accounts for the structural rates, conditions, and utilization elements inherent in the payer’s algorithm."
+   }
+  },
+  {
+   "id": "A.r3",
+   "line": 18579,
+   "kind": "code_match",
+   "cells": {
+    "description": "Major Hip And Knee Joint Replacement Or Reattachment Of Lower Extremity Without Mcc",
+    "code|1": "470",
+    "code|1|type": "MS-DRG",
+    "setting": "inpatient",
+    "payer_name": "Carefirst Admin",
+    "plan_name": "Carefirst Administrators Jhu Only",
+    "standard_charge|negotiated_algorithm": "Conditional payment logic at the claim level including numerous contracting methods, hierarchical applications, and service utilization requirements.",
+    "estimated_amount": "87530.76",
+    "standard_charge|methodology": "other",
+    "standard_charge|min": "26612.02",
+    "standard_charge|max": "87530.76",
+    "additional_generic_notes": "Contracting method is an algorithm described in the 'standard_charges|algorithm' field. The estimated allowed amount provided accounts for the structural rates, conditions, and utilization elements inherent in the payer’s algorithm."
+   }
+  },
+  {
+   "id": "A.r4",
+   "line": 18580,
+   "kind": "code_match",
+   "cells": {
+    "description": "Major Hip And Knee Joint Replacement Or Reattachment Of Lower Extremity Without Mcc",
+    "code|1": "470",
+    "code|1|type": "MS-DRG",
+    "setting": "inpatient",
+    "payer_name": "Carefirst Blue Choice",
+    "plan_name": "Blue Cr/Sh Natl Accts Bluechoice",
+    "standard_charge|negotiated_algorithm": "Conditional payment logic at the claim level including numerous contracting methods, hierarchical applications, and service utilization requirements.",
+    "estimated_amount": "45456.15",
+    "standard_charge|methodology": "other",
+    "standard_charge|min": "26612.02",
+    "standard_charge|max": "87530.76",
+    "additional_generic_notes": "Contracting method is an algorithm described in the 'standard_charges|algorithm' field. The estimated allowed amount provided accounts for the structural rates, conditions, and utilization elements inherent in the payer’s algorithm."
+   }
+  },
+  {
+   "id": "A.r5",
+   "line": 18581,
+   "kind": "code_match",
+   "cells": {
+    "description": "Major Hip And Knee Joint Replacement Or Reattachment Of Lower Extremity Without Mcc",
+    "code|1": "470",
+    "code|1|type": "MS-DRG",
+    "setting": "inpatient",
+    "payer_name": "Carefirst Blue Choice",
+    "plan_name": "Carefirst Blue Choice Open Access",
+    "standard_charge|negotiated_algorithm": "Conditional payment logic at the claim level including numerous contracting methods, hierarchical applications, and service utilization requirements.",
+    "estimated_amount": "49377.72",
+    "standard_charge|methodology": "other",
+    "standard_charge|min": "26612.02",
+    "standard_charge|max": "87530.76",
+    "additional_generic_notes": "Contracting method is an algorithm described in the 'standard_charges|algorithm' field. The estimated allowed amount provided accounts for the structural rates, conditions, and utilization elements inherent in the payer’s algorithm."
+   }
+  },
+  {
+   "id": "A.r6",
+   "line": 18582,
+   "kind": "code_match",
+   "cells": {
+    "description": "Major Hip And Knee Joint Replacement Or Reattachment Of Lower Extremity Without Mcc",
+    "code|1": "470",
+    "code|1|type": "MS-DRG",
+    "setting": "inpatient",
+    "payer_name": "Carefirst Blue Choice",
+    "plan_name": "Carefirst Blue Choice Hmo",
+    "standard_charge|negotiated_algorithm": "Conditional payment logic at the claim level including numerous contracting methods, hierarchical applications, and service utilization requirements.",
+    "estimated_amount": "27557.31",
+    "standard_charge|methodology": "other",
+    "standard_charge|min": "26612.02",
+    "standard_charge|max": "87530.76",
+    "additional_generic_notes": "Contracting method is an algorithm described in the 'standard_charges|algorithm' field. The estimated allowed amount provided accounts for the structural rates, conditions, and utilization elements inherent in the payer’s algorithm."
+   }
+  },
+  {
+   "id": "A.r7",
+   "line": 18583,
+   "kind": "code_match",
+   "cells": {
+    "description": "Major Hip And Knee Joint Replacement Or Reattachment Of Lower Extremity Without Mcc",
+    "code|1": "470",
+    "code|1|type": "MS-DRG",
+    "setting": "inpatient",
+    "payer_name": "Medicaid Maryland",
+    "plan_name": "Maryland Medical Assistance",
+    "standard_charge|negotiated_algorithm": "Conditional payment logic at the claim level including numerous contracting methods, hierarchical applications, and service utilization requirements.",
+    "estimated_amount": "53855.38",
+    "standard_charge|methodology": "other",
+    "standard_charge|min": "26612.02",
+    "standard_charge|max": "87530.76",
+    "additional_generic_notes": "Contracting method is an algorithm described in the 'standard_charges|algorithm' field. The estimated allowed amount provided accounts for the structural rates, conditions, and utilization elements inherent in the payer’s algorithm."
+   }
+  },
+  {
+   "id": "A.r8",
+   "line": 18584,
+   "kind": "code_match",
+   "cells": {
+    "description": "Major Hip And Knee Joint Replacement Or Reattachment Of Lower Extremity Without Mcc",
+    "code|1": "470",
+    "code|1|type": "MS-DRG",
+    "setting": "inpatient",
+    "payer_name": "Priority Partners",
+    "plan_name": "Priority Partners Mco New 9/2022",
+    "standard_charge|negotiated_algorithm": "Conditional payment logic at the claim level including numerous contracting methods, hierarchical applications, and service utilization requirements.",
+    "estimated_amount": "31666.74",
+    "standard_charge|methodology": "other",
+    "standard_charge|min": "26612.02",
+    "standard_charge|max": "87530.76",
+    "additional_generic_notes": "Contracting method is an algorithm described in the 'standard_charges|algorithm' field. The estimated allowed amount provided accounts for the structural rates, conditions, and utilization elements inherent in the payer’s algorithm."
+   }
+  },
+  {
+   "id": "A.r9",
+   "line": 18585,
+   "kind": "code_match",
+   "cells": {
+    "description": "Major Hip And Knee Joint Replacement Or Reattachment Of Lower Extremity Without Mcc",
+    "code|1": "470",
+    "code|1|type": "MS-DRG",
+    "setting": "inpatient",
+    "payer_name": "United Healthcare",
+    "plan_name": "United Mdipa/Optimum Choice Hmo",
+    "standard_charge|negotiated_algorithm": "Conditional payment logic at the claim level including numerous contracting methods, hierarchical applications, and service utilization requirements.",
+    "estimated_amount": "26612.02",
+    "standard_charge|methodology": "other",
+    "standard_charge|min": "26612.02",
+    "standard_charge|max": "87530.76",
+    "additional_generic_notes": "Contracting method is an algorithm described in the 'standard_charges|algorithm' field. The estimated allowed amount provided accounts for the structural rates, conditions, and utilization elements inherent in the payer’s algorithm."
+   }
+  },
+  {
+   "id": "A.r10",
+   "line": 18586,
+   "kind": "code_match",
+   "cells": {
+    "description": "Major Hip And Knee Joint Replacement Or Reattachment Of Lower Extremity Without Mcc",
+    "code|1": "470",
+    "code|1|type": "MS-DRG",
+    "setting": "inpatient",
+    "payer_name": "United Healthcare Med Adv",
+    "plan_name": "United Healthcare Grp Ind Med Adv Ppo",
+    "standard_charge|negotiated_algorithm": "Conditional payment logic at the claim level including numerous contracting methods, hierarchical applications, and service utilization requirements.",
+    "estimated_amount": "43591.54",
+    "standard_charge|methodology": "other",
+    "standard_charge|min": "26612.02",
+    "standard_charge|max": "87530.76",
+    "additional_generic_notes": "Contracting method is an algorithm described in the 'standard_charges|algorithm' field. The estimated allowed amount provided accounts for the structural rates, conditions, and utilization elements inherent in the payer’s algorithm."
+   }
+  },
+  {
+   "id": "A.r11",
+   "line": 23038,
+   "kind": "code_match",
+   "cells": {
+    "description": "IMMUNE GLOBULIN (GAMUNEX-C) 10% 20 G/200 ML INJECTION SOLUTION",
+    "code|1": "13533080025",
+    "code|1|type": "NDC",
+    "setting": "both",
+    "drug_unit_of_measurement": "470",
+    "drug_type_of_measurement": "ML",
+    "standard_charge|gross": "5913.11",
+    "standard_charge|discounted_cash": "5913.11",
+    "additional_generic_notes": "Gross Charge Type: Pharmacy"
+   }
+  },
+  {
+   "id": "A.k1",
+   "line": 11393,
+   "kind": "keyword_match",
+   "cells": {
+    "description": "HC RAD EXAM KNEE 1 OR 2 VIEWS",
+    "code|1": "32000059",
+    "code|1|type": "CDM",
+    "code|2": "320",
+    "code|2|type": "RC",
+    "code|3": "73560",
+    "code|3|type": "HCPCS",
+    "billing_class": "facility",
+    "setting": "both",
+    "standard_charge|gross": "136.42",
+    "standard_charge|discounted_cash": "136.42",
+    "additional_generic_notes": "Gross Charge Type: HB ABN JHH ESTIMATES ONLY"
+   }
+  },
+  {
+   "id": "A.k2",
+   "line": 11394,
+   "kind": "keyword_match",
+   "cells": {
+    "description": "HC RAD EXAM KNEE 1 OR 2 VIEWS",
+    "code|1": "32000059",
+    "code|1|type": "CDM",
+    "code|2": "320",
+    "code|2|type": "RC",
+    "code|3": "73560",
+    "code|3|type": "HCPCS",
+    "billing_class": "facility",
+    "setting": "both",
+    "standard_charge|gross": "276.1",
+    "standard_charge|discounted_cash": "276.1",
+    "additional_generic_notes": "Gross Charge Type: JHH 45 DIAGNOSTIC IMAGING"
+   }
+  },
+  {
+   "id": "A.k3",
+   "line": 11395,
+   "kind": "keyword_match",
+   "cells": {
+    "description": "HC RAD EXAM KNEE 3 VIEWS",
+    "code|1": "32000060",
+    "code|1|type": "CDM",
+    "code|2": "320",
+    "code|2|type": "RC",
+    "code|3": "73562",
+    "code|3|type": "HCPCS",
+    "billing_class": "facility",
+    "setting": "both",
+    "standard_charge|gross": "322.1",
+    "standard_charge|discounted_cash": "322.1",
+    "additional_generic_notes": "Gross Charge Type: JHH 45 DIAGNOSTIC IMAGING"
+   }
+  },
+  {
+   "id": "A.k4",
+   "line": 11396,
+   "kind": "keyword_match",
+   "cells": {
+    "description": "HC RAD EXAM KNEE 3 VIEWS",
+    "code|1": "32000060",
+    "code|1|type": "CDM",
+    "code|2": "320",
+    "code|2|type": "RC",
+    "code|3": "73562",
+    "code|3|type": "HCPCS",
+    "billing_class": "facility",
+    "setting": "both",
+    "standard_charge|gross": "136.42",
+    "standard_charge|discounted_cash": "136.42",
+    "additional_generic_notes": "Gross Charge Type: HB ABN JHH ESTIMATES ONLY"
+   }
+  },
+  {
+   "id": "A.k5",
+   "line": 11397,
+   "kind": "keyword_match",
+   "cells": {
+    "description": "HC RAD EXAM KNEE 4 OR MORE VIEWS",
+    "code|1": "32000061",
+    "code|1|type": "CDM",
+    "code|2": "320",
+    "code|2|type": "RC",
+    "code|3": "73564",
+    "code|3|type": "HCPCS",
+    "billing_class": "facility",
+    "setting": "both",
+    "standard_charge|gross": "409.24",
+    "standard_charge|discounted_cash": "409.24",
+    "additional_generic_notes": "Gross Charge Type: HB ABN JHH ESTIMATES ONLY"
+   }
+  },
+  {
+   "id": "A.k6",
+   "line": 11398,
+   "kind": "keyword_match",
+   "cells": {
+    "description": "HC RAD EXAM KNEE 4 OR MORE VIEWS",
+    "code|1": "32000061",
+    "code|1|type": "CDM",
+    "code|2": "320",
+    "code|2|type": "RC",
+    "code|3": "73564",
+    "code|3|type": "HCPCS",
+    "billing_class": "facility",
+    "setting": "both",
+    "standard_charge|gross": "368.13",
+    "standard_charge|discounted_cash": "368.13",
+    "additional_generic_notes": "Gross Charge Type: JHH 45 DIAGNOSTIC IMAGING"
+   }
+  },
+  {
+   "id": "A.k7",
+   "line": 11399,
+   "kind": "keyword_match",
+   "cells": {
+    "description": "HC RAD EXAM BOTH KNEES STANDING AP MIN 3 VIEWS",
+    "code|1": "32000062",
+    "code|1|type": "CDM",
+    "code|2": "320",
+    "code|2|type": "RC",
+    "code|3": "73565",
+    "code|3|type": "HCPCS",
+    "billing_class": "facility",
+    "setting": "both",
+    "standard_charge|gross": "368.13",
+    "standard_charge|discounted_cash": "368.13",
+    "additional_generic_notes": "Gross Charge Type: JHH 45 DIAGNOSTIC IMAGING"
+   }
+  },
+  {
+   "id": "A.k8",
+   "line": 11400,
+   "kind": "keyword_match",
+   "cells": {
+    "description": "HC RAD EXAM BOTH KNEES STANDING AP MIN 3 VIEWS",
+    "code|1": "32000062",
+    "code|1|type": "CDM",
+    "code|2": "320",
+    "code|2|type": "RC",
+    "code|3": "73565",
+    "code|3|type": "HCPCS",
+    "billing_class": "facility",
+    "setting": "both",
+    "standard_charge|gross": "136.42",
+    "standard_charge|discounted_cash": "136.42",
+    "additional_generic_notes": "Gross Charge Type: HB ABN JHH ESTIMATES ONLY"
+   }
+  },
+  {
+   "id": "A.k9",
+   "line": 11621,
+   "kind": "keyword_match",
+   "cells": {
+    "description": "HC RAD EXAM KNEE ARTHROGRAPHY",
+    "code|1": "32200005",
+    "code|1|type": "CDM",
+    "code|2": "322",
+    "code|2|type": "RC",
+    "code|3": "73580",
+    "code|3|type": "HCPCS",
+    "billing_class": "facility",
+    "setting": "both",
+    "standard_charge|gross": "532.9",
+    "standard_charge|discounted_cash": "532.9",
+    "additional_generic_notes": "Gross Charge Type: HB ABN JHH ESTIMATES ONLY"
+   }
+  },
+  {
+   "id": "A.k10",
+   "line": 11622,
+   "kind": "keyword_match",
+   "cells": {
+    "description": "HC RAD EXAM KNEE ARTHROGRAPHY",
+    "code|1": "32200005",
+    "code|1|type": "CDM",
+    "code|2": "322",
+    "code|2|type": "RC",
+    "code|3": "73580",
+    "code|3|type": "HCPCS",
+    "billing_class": "facility",
+    "setting": "both",
+    "standard_charge|gross": "65.76",
+    "standard_charge|discounted_cash": "65.76",
+    "additional_generic_notes": "Gross Charge Type: JHH 78 IVC"
+   }
+  },
+  {
+   "id": "A.k11",
+   "line": 11623,
+   "kind": "keyword_match",
+   "cells": {
+    "description": "HC RAD EXAM KNEE ARTHROGRAPHY",
+    "code|1": "32200005",
+    "code|1|type": "CDM",
+    "code|2": "322",
+    "code|2|type": "RC",
+    "code|3": "73580",
+    "code|3|type": "HCPCS",
+    "billing_class": "facility",
+    "setting": "both",
+    "standard_charge|gross": "543.65",
+    "standard_charge|discounted_cash": "543.65",
+    "additional_generic_notes": "Gross Charge Type: JHH 45 DIAGNOSTIC IMAGING"
+   }
+  },
+  {
+   "id": "A.k12",
+   "line": 12518,
+   "kind": "keyword_match",
+   "cells": {
+    "description": "HC APPLICATION OF SHORT LEG CAST (BELOW KNEE TO TOES)",
+    "code|1": "42000060",
+    "code|1|type": "CDM",
+    "code|2": "420",
+    "code|2|type": "RC",
+    "code|3": "29405",
+    "code|3|type": "HCPCS",
+    "billing_class": "facility",
+    "setting": "both",
+    "standard_charge|gross": "185",
+    "standard_charge|discounted_cash": "185",
+    "additional_generic_notes": "Gross Charge Type: JHH UN PT/OT/SLP OFFSITE"
+   }
+  }
+ ],
+ "common": {
+  "billing_class": "facility"
+ },
+ "header": [
+  "description",
+  "code|1",
+  "code|1|type",
+  "code|2",
+  "code|2|type",
+  "code|3",
+  "code|3|type",
+  "billing_class",
+  "setting",
+  "drug_unit_of_measurement",
+  "drug_type_of_measurement",
+  "modifiers",
+  "standard_charge|gross",
+  "standard_charge|discounted_cash",
+  "payer_name",
+  "plan_name",
+  "standard_charge|negotiated_dollar",
+  "standard_charge|negotiated_percentage",
+  "standard_charge|negotiated_algorithm",
+  "estimated_amount",
+  "standard_charge|methodology",
+  "standard_charge|min",
+  "standard_charge|max",
+  "additional_generic_notes"
+ ],
+ "trace": [
+  {
+   "kind": "thought",
+   "text": "I'll search the Johns Hopkins Hospital price file for MS-DRG 470 (total knee replacement, inpatient)."
+  },
+  {
+   "kind": "tool",
+   "name": "search_price_file",
+   "input": {
+    "hospital_id": "jhh",
+    "code": "470",
+    "code_system": "MS-DRG",
+    "description_keywords": "knee replacement"
+   },
+   "summary": "31,225 records, 11.7 MB scanned, 23 rows kept",
+   "ms": 119
+  },
+  {
+   "kind": "thought",
+   "text": "Good! I found MS-DRG 470 rows. The file shows 10 rows (A.r1 through A.r10) with payer-specific estimated amounts. Let me check if there's a gross charge or self-pay price by looking at the common fields and examining what's available.\n\nI can see:\n- Rows A.r1 through A.r10 are all MS-DRG 470 for inpatient setting\n- Each row has an \"estimated_amount\" field with payer-specific estimates ranging from $26,612.02 to $87,530.76\n- All rows show the same min ($26,612.02) and max ($87,530.76)\n- No \"standa"
+  },
+  {
+   "kind": "tool",
+   "name": "record_extraction",
+   "input": {
+    "status": "partial",
+    "scope": "facility_total"
+   },
+   "summary": "status partial, quote scope facility_total",
+   "ms": 0
+  }
+ ],
+ "agentMs": 26483,
+ "confidenceDetail": {
+  "level": "medium",
+  "reasons": [
+   "No self-pay price: the figure is a payer-specific estimate",
+   "Payer amounts are the hospital's own algorithmic estimates",
+   "3 data-quality problem(s) noted"
+  ],
+  "file_updated": "2025-07-01"
+ }
+}

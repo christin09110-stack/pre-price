@@ -1,0 +1,33 @@
+PASS  health
+        {"ok":true,"time":"2026-10-02T01:32:24.457Z","paypal":"https://api-m.sandbox.paypal.com","model":"us.anthropic.claude-sonnet-4-5-20250929-v1:0","clock":"Subscription clock is simulated in demos: PayPal sandbox has no clock control."}
+PASS  catalog has 5 seeded extractions
+        mclaren-29881:usable/facility_total jhh-470:partial/facility_total brookings-27447:partial/component_only mclaren-47562:usable/none brookings-47562:unusable/component_only
+PASS  REFUSES to quote Brookings knee replacement (file only has professional fees)
+        Revenue code 982 on rows r1 and r2 indicates professional fees (96x-98x range). The amounts are a few hundred dollars, far too low to represent the facility total for a total knee replacement. These are only professional components, not the whole hospital facility charge.
+PASS  REFUSES self-pay quote at Johns Hopkins DRG 470 (file has no cash price)
+        Rows r1–r10 are all MS-DRG 470 inpatient facility charges. The file provides only payer-specific estimated_amount figures (ranging from 26612.02 to 87530.76) with algorithm-based contracting. No discounted_cash or self-pay price is given for this DRG. The estimated amounts are facility totals for the whole procedure, but are payer-specific estimates, not fixed prices.
+PASS  INVOICING create+send: McLaren Flint knee arthroscopy
+        invoice INV2-AK3K-2SXW-UUFK-X9QH #PP-1002-AWH0WY status=SENT total=$4464.93 lines=1 qr=true
+        https://www.sandbox.paypal.com/invoice/p/#AK3K2SXWUUFKX9QH
+PASS  quote total equals grounded file cell ($4,464.93)
+PASS  INVOICING QR code generated
+PASS  INVOICING remind
+        Reminder sent via POST /v2/invoicing/invoices/{id}/remind
+PASS  BILLING plan + subscription create (12 months, 10% down)
+        plan P-9KN20143KT3862341NK7QTMI sub I-D58D0JHGHFC0 status=APPROVAL_PENDING
+        terms {"months":12,"monthly":334.87,"down":446.49,"total":4464.93,"interest":0,"apr":0}
+        approve: https://www.sandbox.paypal.com/webapps/billing/subscriptions?ba_token=BA-02K955967N181022P
+PASS  SIMULATED clock tick 1: down payment -> record-payment
+        status=PARTIALLY_PAID paid=446.49 due=4018.44
+PASS  SIMULATED clock tick 2: instalment 1
+        paid=781.36 due=3683.57
+PASS  invoice reaches PAID (PayPal reports MARKED_AS_PAID for externally recorded payments) after all instalments
+        status=MARKED_AS_PAID paid=4464.93 due=0.00 payments=13
+PASS  no 13th instalment
+        Plan already complete.
+PASS  INVOICING insured quote at Johns Hopkins (allowed $83508.91, OOP cap $3,500)
+        invoice INV2-GQT2-P3PZ-6FPF-DTU7 total=$3500 lines=Deductible still to meet $2000 | Coinsurance 20% on the remainder (limited by out-of-pocket maximum) $1500
+PASS  INVOICING cancel
+        status=CANCELLED
+
+ALL PASSED

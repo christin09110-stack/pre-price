@@ -1,0 +1,12 @@
+2026-10-02T01:28:09.177Z mclaren-29881: status=usable scope=facility_total amount=4464.93 grounded 17/17 removed=0 rows=13 18828ms
+2026-10-02T01:28:26.403Z jhh-470: status=partial scope=facility_total amount=null grounded 12/12 removed=0 rows=23 17226ms
+2026-10-02T01:28:44.361Z brookings-27447: status=partial scope=component_only amount=null grounded 17/17 removed=0 rows=3 17958ms
+2026-10-02T01:29:06.897Z mclaren-47562: status=usable scope=none amount=null grounded 0/17 removed=17 rows=14 22536ms
+2026-10-02T01:29:27.402Z brookings-47562: status=unusable scope=component_only amount=null grounded 18/18 removed=0 rows=6 20505ms
+2026-10-02T02:01:58.094Z mclaren-29881: status=usable scope=facility_total amount=4464.93 grounded 19/19 removed=0 conf=medium tools=3 34331ms
+2026-10-02T02:02:24.583Z jhh-470: status=partial scope=facility_total amount=null grounded 12/12 removed=0 conf=medium tools=2 26484ms
+2026-10-02T02:02:45.419Z brookings-27447: status=unusable scope=component_only amount=null grounded 4/4 removed=0 conf=low tools=2 20836ms
+2026-10-02T02:03:18.578Z mclaren-47562: status=partial scope=component_only amount=null grounded 18/18 removed=0 conf=low tools=3 33159ms
+2026-10-02T02:03:42.699Z brookings-47562: status=unusable scope=component_only amount=null grounded 17/17 removed=0 conf=low tools=2 24121ms
+2026-10-02T02:14:12.608Z wentworth-470: status=usable scope=facility_total amount=45039.59 grounded 19/19 removed=0 conf=medium tools=2 47065ms
+2026-10-02T02:22:58.581Z wentworth-470: status=usable scope=facility_total amount=75065.99 grounded 18/18 removed=0 conf=medium tools=3 87163ms

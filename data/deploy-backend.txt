@@ -1,0 +1,8 @@
+== DynamoDB
+== IAM role
+== package
+-rw-rw-r-- 1 rogerkorantenng rogerkorantenng 58985 Oct  2 02:30 /tmp/prepice.zip
+== Lambda
+== Function URL
+API: https://fleltplpaitbmueekixec2wcpq0paotb.lambda-url.us-east-1.on.aws
+{"api":"https://fleltplpaitbmueekixec2wcpq0paotb.lambda-url.us-east-1.on.aws","dist":"E2YX8XB34H8Z8G","site":"https://d374t6frlui23r.cloudfront.net"}

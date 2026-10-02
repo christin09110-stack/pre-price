@@ -1,0 +1,6 @@
+200% text, width 1280, home: horizontal overflow 0px
+200% text, width 1280, read: horizontal overflow 0px
+200% text, width 1280, quote: horizontal overflow 0px
+200% text, width 360, home: horizontal overflow 0px
+200% text, width 360, read: horizontal overflow 0px
+200% text, width 360, quote: horizontal overflow 0px

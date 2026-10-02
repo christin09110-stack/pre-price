@@ -1,0 +1,33 @@
+PASS  home heading
+PASS  search lists a result
+PASS  search Enter opens a result
+PASS  refusal explains itself
+PASS  no quote form on a refused result
+PASS  disclosure opens
+PASS  validation error shown for a bad email
+PASS  quote document shows the file price
+PASS  QR code image present
+PASS  slider updates the comparison
+PASS  reminder confirmed
+PASS  confirm dialog names the commitment
+PASS  Escape closes the dialog
+PASS  approval link points at PayPal
+PASS  simulated clock banner visible
+PASS  payment recorded on the invoice
+PASS  second payment recorded
+PASS  saved quotes lists it
+PASS  still there after reload
+PASS  quote still there after reload with progress intact
+PASS  page /files
+PASS  page /evidence
+PASS  page /how
+PASS  5.4 versus 37.9 distinction present
+PASS  theme toggle sets data-theme
+PASS  unknown route has a way home
+PASS  mobile drawer opens
+PASS  drawer link navigates and closes
+PASS  focus is visible on first Tab  solid
+PASS  a quote with payments offers no cancel button
+PASS  quote cancelled through PayPal
+PASS  no uncaught page errors
+ALL PASSED

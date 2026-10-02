@@ -1,0 +1,48 @@
+PASS  health
+        {"ok":true,"time":"2026-10-02T02:09:38.171Z","paypal":"https://api-m.sandbox.paypal.com","model":"us.anthropic.claude-sonnet-4-5-20250929-v1:0","clock":"Subscription clock is simulated in demos: PayPal sandbox has no clock control."}
+PASS  catalog has 5 seeded extractions
+        mclaren-29881:usable/facility_total jhh-470:partial/facility_total brookings-27447:unusable/component_only mclaren-47562:partial/component_only brookings-47562:unusable/component_only
+PASS  REFUSES to quote Brookings knee replacement (file only has professional fees)
+        Rows A.r1 and A.r2 carry revenue code 982 (professional fees) with amounts of $568.82 and $257.50. These are surgeon professional fees for left and right knee, not the hospital facility charge for the procedure.
+PASS  REFUSES self-pay quote at Johns Hopkins DRG 470 (file has no cash price)
+        The file provides only payer-specific estimated amounts for MS-DRG 470, ranging from $26,612.02 to $87,530.76. No self-pay or discounted cash price is listed. These are facility-total estimates for the inpatient stay, but each is tied to a specific insurance plan's algorithm.
+PASS  INVOICING create+send: McLaren Flint knee arthroscopy
+        invoice INV2-SY5D-AEEC-ZRBN-DUT7 #PP-1002-MJA71R status=SENT total=$4464.93 lines=1 qr=true
+        https://www.sandbox.paypal.com/invoice/p/#SY5DAEECZRBNDUT7
+PASS  quote total equals grounded file cell ($4,464.93)
+PASS  INVOICING QR code generated
+PASS  INVOICING remind
+        Reminder sent via POST /v2/invoicing/invoices/{id}/remind
+PASS  BILLING plan + subscription create (12 months, 10% down)
+        plan P-0VG83236WK941203BNK7RE2A sub I-61PWKE1E5LHU status=APPROVAL_PENDING
+        terms {"months":12,"monthly":334.87,"down":446.49,"total":4464.93,"interest":0,"apr":0}
+        approve: https://www.sandbox.paypal.com/webapps/billing/subscriptions?ba_token=BA-1B567773SG619482V
+PASS  SIMULATED clock tick 1: down payment -> record-payment
+        status=PARTIALLY_PAID paid=446.49 due=4018.44
+PASS  SIMULATED clock tick 2: instalment 1
+        paid=781.36 due=3683.57
+PASS  invoice reaches PAID (PayPal reports MARKED_AS_PAID for externally recorded payments) after all instalments
+        status=MARKED_AS_PAID paid=4464.93 due=0.00 payments=13
+PASS  no 13th instalment
+        Plan already complete.
+PASS  INVOICING insured quote at Johns Hopkins (allowed $83508.91, OOP cap $3,500)
+        invoice INV2-VNSF-VL9D-WWNS-4PFS total=$3500 lines=Deductible still to meet $2000 | Coinsurance 20% on the remainder (limited by out-of-pocket maximum) $1500
+PASS  INVOICING cancel
+        status=CANCELLED
+PASS  IDEMPOTENCY: replayed request returns the same invoice, no duplicate
+        first INV2-WKBD-R4G6-AFB2-SLVD  replay INV2-WKBD-R4G6-AFB2-SLVD replayed=true
+PASS  WEBHOOK: forged/tampered payload is rejected (HTTP 401)
+        HTTP 401 {"rejected":true,"verified":"FAILURE"}
+PASS  cancel (fires INVOICING.INVOICE.CANCELLED at our webhook)
+        status=CANCELLED
+PASS  WEBHOOK: genuine PayPal event arrived and passed verify-webhook-signature
+        {"summary":"A merchant or customer cancels an invoice.","at":"2026-10-02T02:09:06.541Z","resource":"INV2-V8J4-KD9M-B23P-Q4CP","type":"INVOICING.INVOICE.CANCELLED","verified":"SUCCESS","id":"WH-1EY48101DH405293B-69W7798142347204L"}
+FAIL  AGENT asks a clarifying question for a vague request
+        HTTP 500 {"error":"Too many requests, please wait before trying again."}
+PASS  AGENT resolves code, streams the file, records a grounded price
+        tools: resolve_procedure_code > search_price_file > record_extraction
+        30,035 records, 13.9 MB scanned, 13 rows kept  confidence=medium (The file carries no update date, so it may be stale)
+PASS  AGENT refuses to invent a price when the file only has professional fees
+        scope=none confidence=low: Rows A.r1 and A.r2 carry revenue code 982 (professional fees) with amounts of $568.82 and $257.50. These are professional fee components only, not the hospital facility charge for the procedure.
+
+1 FAILED

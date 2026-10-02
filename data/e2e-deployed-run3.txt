@@ -1,0 +1,48 @@
+PASS  health
+        {"ok":true,"time":"2026-10-02T02:25:54.031Z","paypal":"https://api-m.sandbox.paypal.com","model":"us.anthropic.claude-sonnet-4-5-20250929-v1:0","clock":"Subscription clock is simulated in demos: PayPal sandbox has no clock control."}
+FAIL  catalog has 5 seeded extractions
+        mclaren-29881:usable/facility_total jhh-470:partial/facility_total brookings-27447:unusable/component_only mclaren-47562:partial/component_only wentworth-470:usable/facility_total brookings-47562:unusable/component_only
+PASS  REFUSES to quote Brookings knee replacement (file only has professional fees)
+        Rows A.r1 and A.r2 carry revenue code 982 (professional fees) with amounts of $568.82 and $257.50. These are surgeon professional fees for left and right knee, not the hospital facility charge for the procedure.
+PASS  REFUSES self-pay quote at Johns Hopkins DRG 470 (file has no cash price)
+        The file provides only payer-specific estimated amounts for MS-DRG 470, ranging from $26,612.02 to $87,530.76. No self-pay or discounted cash price is listed. These are facility-total estimates for the inpatient stay, but each is tied to a specific insurance plan's algorithm.
+PASS  INVOICING create+send: McLaren Flint knee arthroscopy
+        invoice INV2-M2HV-TJ7J-RFJ9-32Z9 #PP-1002-IZHRP9 status=SENT total=$4464.93 lines=1 qr=true
+        https://www.sandbox.paypal.com/invoice/p/#M2HVTJ7JRFJ932Z9
+PASS  quote total equals grounded file cell ($4,464.93)
+PASS  INVOICING QR code generated
+PASS  INVOICING remind
+        Reminder sent via POST /v2/invoicing/invoices/{id}/remind
+PASS  BILLING plan + subscription create (12 months, 10% down)
+        plan P-5R613110NX051005ANK7RMNY sub I-AKYMRV6LY2YH status=APPROVAL_PENDING
+        terms {"months":12,"monthly":334.87,"down":446.49,"total":4464.93,"interest":0,"apr":0}
+        approve: https://www.sandbox.paypal.com/webapps/billing/subscriptions?ba_token=BA-0KP50948PV949940G
+PASS  SIMULATED clock tick 1: down payment -> record-payment
+        status=PARTIALLY_PAID paid=446.49 due=4018.44
+PASS  SIMULATED clock tick 2: instalment 1
+        paid=781.36 due=3683.57
+PASS  invoice reaches PAID (PayPal reports MARKED_AS_PAID for externally recorded payments) after all instalments
+        status=MARKED_AS_PAID paid=4464.93 due=0.00 payments=13
+PASS  no 13th instalment
+        Plan already complete.
+PASS  INVOICING insured quote at Johns Hopkins (allowed $83508.91, OOP cap $3,500)
+        invoice INV2-EBCW-RL7K-FN5U-3KZQ total=$3500 lines=Deductible still to meet $2000 | Coinsurance 20% on the remainder (limited by out-of-pocket maximum) $1500
+PASS  INVOICING cancel
+        status=CANCELLED
+PASS  IDEMPOTENCY: replayed request returns the same invoice, no duplicate
+        first INV2-2ARN-L2QF-5VWX-VX33  replay INV2-2ARN-L2QF-5VWX-VX33 replayed=true
+PASS  WEBHOOK: forged/tampered payload is rejected (HTTP 401)
+        HTTP 401 {"rejected":true,"verified":"FAILURE"}
+PASS  cancel (fires INVOICING.INVOICE.CANCELLED at our webhook)
+        status=CANCELLED
+PASS  WEBHOOK: genuine PayPal event arrived and passed verify-webhook-signature
+        {"verified":"SUCCESS","summary":"A merchant or customer cancels an invoice.","type":"INVOICING.INVOICE.CANCELLED","at":"2026-10-02T02:10:37.761Z","id":"WH-4TA10674UF3507723-6YF1543691460802F","resource":"INV2-WKBD-R4G6-AFB2-SLVD"}
+PASS  AGENT asks a clarifying question for a vague request
+        What type of knee surgery do you need? ["Knee arthroscopy (scope to repair meniscus, cartilage, etc.)","Total knee replacement","Partial knee replacement","ACL reconstruction","Other knee procedure"]
+PASS  AGENT resolves code, streams the file, records a grounded price
+        tools: resolve_procedure_code > search_price_file > get_payer_rates > record_extraction
+        30,035 records, 13.9 MB scanned, 13 rows kept  confidence=medium (The file carries no update date, so it may be stale)
+PASS  AGENT refuses to invent a price when the file only has professional fees
+        scope=component_only confidence=low: The only rows for CPT 27447 are A.r1 and A.r2 with revenue code 982 (professional fees) showing $568.82 and $257.50. These small amounts are professional fee components, not the facility charge for the whole procedure. No facility total price exists in the file.
+
+1 FAILED

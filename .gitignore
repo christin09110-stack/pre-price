@@ -1,0 +1,14 @@
+node_modules
+.deploy-state.json
+.env
+web/dist
+data/files/
+
+# QA screenshots from the build rounds — not part of the project
+screenshots/
+shots/
+.shots/
+evidence/
+
+# Source price-file archives (148MB). Documented in the README; the live site has them.
+data/files/*.zip

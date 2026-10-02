@@ -1,0 +1,8 @@
+light 360 horizontal overflow px: 0 
+light 768 horizontal overflow px: 0 
+light 1280 horizontal overflow px: 0 
+light 1920 horizontal overflow px: 0 
+dark 360 horizontal overflow px: 0 
+dark 768 horizontal overflow px: 0 
+dark 1280 horizontal overflow px: 0 
+dark 1920 horizontal overflow px: 0 

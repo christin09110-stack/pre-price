@@ -1,0 +1,34 @@
+
+LIGHT
+PASS  15.79:1  (need 4.5:1)  ink on page  #101A33 on #F3F5F8
+PASS  17.25:1  (need 4.5:1)  ink on surface  #101A33 on #FFFFFF
+PASS  8.07:1  (need 4.5:1)  secondary text on surface  #44506A on #FFFFFF
+PASS  7.39:1  (need 4.5:1)  secondary text on page  #44506A on #F3F5F8
+PASS  5.77:1  (need 4.5:1)  tertiary text (placeholders) on surface  #5B667C on #FFFFFF
+PASS  13.79:1  (need 4.5:1)  button text on button  #FFFFFF on #1B2B55
+PASS  13.79:1  (need 4.5:1)  link/brand on surface  #1B2B55 on #FFFFFF
+PASS  11.87:1  (need 4.5:1)  label on tint panel  #1B2B55 on #E9EEFA
+PASS  6.12:1  (need 4.5:1)  ok badge  #07664A on #E3F4EC
+PASS  6.70:1  (need 4.5:1)  warning badge  #7A4A00 on #FFF1D6
+PASS  5.59:1  (need 4.5:1)  risk badge  #B3261E on #FCE9E7
+PASS  6.54:1  (need 4.5:1)  interest red on surface  #B3261E on #FFFFFF
+PASS  5.73:1  (need 3:1)  focus ring on surface (UI, 3:1)  #1F5FD6 on #FFFFFF
+PASS  3.87:1  (need 3:1)  input border on surface (UI, 3:1)  #76829A on #FFFFFF
+PASS  14.35:1  (need 4.5:1)  ink on highlighted cell  #101A33 on #FFE9A8
+
+DARK
+PASS  16.04:1  (need 4.5:1)  ink on page  #E9EDF7 on #0B1122
+PASS  14.58:1  (need 4.5:1)  ink on surface  #E9EDF7 on #131B31
+PASS  9.14:1  (need 4.5:1)  secondary text on surface  #B4BED2 on #131B31
+PASS  10.06:1  (need 4.5:1)  secondary text on page  #B4BED2 on #0B1122
+PASS  6.74:1  (need 4.5:1)  tertiary text (placeholders) on surface  #98A3BA on #131B31
+PASS  11.10:1  (need 4.5:1)  button text on button  #0B1330 on #B9C8FF
+PASS  10.39:1  (need 4.5:1)  link/brand on surface  #B9C8FF on #131B31
+PASS  10.41:1  (need 4.5:1)  label on tint panel  #C9D5FF on #1A2447
+PASS  8.49:1  (need 4.5:1)  ok badge  #6FD9AE on #0F2E25
+PASS  8.84:1  (need 4.5:1)  warning badge  #F2C26B on #33270D
+PASS  7.94:1  (need 4.5:1)  risk badge  #FF9B92 on #3A1614
+PASS  8.43:1  (need 4.5:1)  interest red on surface  #FF9B92 on #131B31
+PASS  8.06:1  (need 3:1)  focus ring on surface (UI, 3:1)  #8FB1FF on #131B31
+PASS  4.29:1  (need 3:1)  input border on surface (UI, 3:1)  #70809F on #131B31
+PASS  7.40:1  (need 4.5:1)  ink on highlighted cell  #E9EDF7 on #5A4A12

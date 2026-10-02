@@ -1,0 +1,490 @@
+{
+ "id": "brookings-47562",
+ "seed": {
+  "id": "brookings-47562",
+  "hospital": "brookings",
+  "label": "Laparoscopic gallbladder removal",
+  "short": "Gallbladder removal",
+  "codeLabel": "CPT 47562",
+  "target": {
+   "codes": [
+    "47562"
+   ],
+   "keywords": "/cholecystectomy/i"
+  }
+ },
+ "hospitalInfo": {
+  "name": "Brookings Hospital",
+  "city": "Brookings, SD",
+  "url": "https://www.brookingshealth.org/sites/default/files/2020-12/466000069_Brookings-Hospital_standardcharges.csv",
+  "format": "Custom \"wide\" CSV, 32 columns, 2020",
+  "sizeMB": 8,
+  "mess": "Dashes as placeholders, an unnamed first column, left and right knee as separate rows, and a \"price\" that is a professional fee."
+ },
+ "extractedAt": "2026-10-02T02:03:42.699Z",
+ "status": "unusable",
+ "procedure": {
+  "code": "47562",
+  "code_system": "CPT",
+  "description": "Laparoscopic cholecystectomy (gallbladder removal)",
+  "setting": "outpatient"
+ },
+ "quote": {
+  "scope": "component_only",
+  "amount": null,
+  "basis": "All rows for CPT 47562 show revenue code 982, which is a professional fee code. The amounts ($257.50 to $2,757.00) represent surgeon fees only, not the hospital facility charge for the procedure. No facility total is available in this file."
+ },
+ "gross_charge": {
+  "value": 1924.3,
+  "row_id": "A.r1",
+  "field": "Gross Charge",
+  "cell": "1,924.30",
+  "line": 296
+ },
+ "self_pay_price": {
+  "value": 1924.3,
+  "row_id": "A.r1",
+  "field": "Discounted Cash Price",
+  "cell": "1,924.30",
+  "line": 296
+ },
+ "min_rate": {
+  "value": 1481.71,
+  "row_id": "A.r1",
+  "field": "Minimum Negotiated Charge",
+  "cell": "1,481.71",
+  "line": 296
+ },
+ "max_rate": {
+  "value": 1866.57,
+  "row_id": "A.r1",
+  "field": "Maximum Negotiated Charge",
+  "cell": "1,866.57",
+  "line": 296
+ },
+ "negotiated_rates": [
+  {
+   "payer": "Avera Health Plans",
+   "plan": "PPO",
+   "value": 1731.87,
+   "row_id": "A.r1",
+   "field": "Avera Health Plans PPO",
+   "kind": "negotiated_dollar",
+   "cell": "1,731.87",
+   "line": 296
+  },
+  {
+   "payer": "Cigna",
+   "plan": "PPO",
+   "value": 1866.57,
+   "row_id": "A.r1",
+   "field": "Cigna PPO",
+   "kind": "negotiated_dollar",
+   "cell": "1,866.57",
+   "line": 296
+  },
+  {
+   "payer": "Dakota Care",
+   "plan": "DAS",
+   "value": 1808.84,
+   "row_id": "A.r1",
+   "field": "Dakota Care DAS",
+   "kind": "negotiated_dollar",
+   "cell": "1,808.84",
+   "line": 296
+  },
+  {
+   "payer": "Healthpartners",
+   "plan": "",
+   "value": 1828.09,
+   "row_id": "A.r1",
+   "field": "Healthpartners",
+   "kind": "negotiated_dollar",
+   "cell": "1,828.09",
+   "line": 296
+  },
+  {
+   "payer": "Medica",
+   "plan": "PPO",
+   "value": 1524.05,
+   "row_id": "A.r1",
+   "field": "Medica PPO",
+   "kind": "negotiated_dollar",
+   "cell": "1,524.05",
+   "line": 296
+  },
+  {
+   "payer": "Midlands Choice, Inc.",
+   "plan": "",
+   "value": 1866.57,
+   "row_id": "A.r1",
+   "field": "Midlands Choice, Inc.",
+   "kind": "negotiated_dollar",
+   "cell": "1,866.57",
+   "line": 296
+  },
+  {
+   "payer": "MultiPlan",
+   "plan": "",
+   "value": 1866.57,
+   "row_id": "A.r1",
+   "field": "MultiPlan",
+   "kind": "negotiated_dollar",
+   "cell": "1,866.57",
+   "line": 296
+  },
+  {
+   "payer": "Preferred One",
+   "plan": "",
+   "value": 1866.57,
+   "row_id": "A.r1",
+   "field": "Preferred One",
+   "kind": "negotiated_dollar",
+   "cell": "1,866.57",
+   "line": 296
+  },
+  {
+   "payer": "Sanford Health Plans",
+   "plan": "",
+   "value": 1828.09,
+   "row_id": "A.r1",
+   "field": "Sanford Health Plans",
+   "kind": "negotiated_dollar",
+   "cell": "1,828.09",
+   "line": 296
+  },
+  {
+   "payer": "United Healthcare",
+   "plan": "PPO",
+   "value": 1635.66,
+   "row_id": "A.r1",
+   "field": "United Healthcare PPO",
+   "kind": "negotiated_dollar",
+   "cell": "1,635.66",
+   "line": 296
+  },
+  {
+   "payer": "Christian Health Minstries",
+   "plan": "",
+   "value": 1693.38,
+   "row_id": "A.r1",
+   "field": "Christian Health Minstries",
+   "kind": "negotiated_dollar",
+   "cell": "1,693.38",
+   "line": 296
+  },
+  {
+   "payer": "Unified Group/F.P.",
+   "plan": "",
+   "value": 1635.66,
+   "row_id": "A.r1",
+   "field": "Unified Group/F.P.",
+   "kind": "negotiated_dollar",
+   "cell": "1,635.66",
+   "line": 296
+  },
+  {
+   "payer": "United Healthcare/FFC",
+   "plan": "",
+   "value": 1481.71,
+   "row_id": "A.r1",
+   "field": "United Healthcare/FFC",
+   "kind": "negotiated_dollar",
+   "cell": "1,481.71",
+   "line": 296
+  }
+ ],
+ "not_in_file": [
+  "Hospital facility charges (operating room, recovery room, supplies, equipment)",
+  "Anesthesia professional fees",
+  "Anesthesiologist facility charges",
+  "Pathology fees for gallbladder examination",
+  "Any pre-operative lab work or imaging"
+ ],
+ "problems": [
+  "Revenue code 982 indicates professional fees only, not facility charges",
+  "Three different item numbers for CPT 47562 with prices ranging from $257.50 to $2,757.00 with no explanation of the difference",
+  "Rows A.r1 and A.r2 are duplicates (same item number 9201407, same prices)",
+  "Row A.r4 (item 9001407) lists only 2 payers while other rows list 13+ payers"
+ ],
+ "confidence": "high",
+ "grounding": {
+  "checked": 17,
+  "verified": 17,
+  "removed": []
+ },
+ "hospital": "Brookings Hospital",
+ "procedureLabel": "Laparoscopic cholecystectomy (gallbladder removal)",
+ "scan": {
+  "records": 34350,
+  "bytes": 7992495,
+  "columns": 32,
+  "rowsKept": 7,
+  "headerLine": 1,
+  "ms": 24121
+ },
+ "usage": {
+  "inputTokens": 8625,
+  "outputTokens": 1805
+ },
+ "model": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+ "rows": [
+  {
+   "id": "A.r1",
+   "line": 296,
+   "kind": "code_match",
+   "cells": {
+    "col0": "Shoppable",
+    "Item Number": "9201407",
+    "Revenue Code": "982",
+    "Service ID": "47562",
+    "Service Description": "Laparoscopic Cholecystectomy",
+    "Gross Charge": "1,924.30",
+    "Discounted Cash Price": "1,924.30",
+    "Minimum Negotiated Charge": "1,481.71",
+    "Maximum Negotiated Charge": "1,866.57",
+    "Avera Health Plans PPO": "1,731.87",
+    "Cigna PPO": "1,866.57",
+    "Dakota Care DAS": "1,808.84",
+    "Healthpartners": "1,828.09",
+    "Medica PPO": "1,524.05",
+    "Midlands Choice, Inc.": "1,866.57",
+    "MultiPlan": "1,866.57",
+    "Preferred One": "1,866.57",
+    "Sanford Health Plans": "1,828.09",
+    "United Healthcare PPO": "1,635.66",
+    "Christian Health Minstries": "1,693.38",
+    "Unified Group/F.P.": "1,635.66",
+    "United Healthcare/FFC": "1,481.71"
+   }
+  },
+  {
+   "id": "A.r2",
+   "line": 29622,
+   "kind": "code_match",
+   "cells": {
+    "col0": "Chargemaster",
+    "Item Number": "9201407",
+    "Revenue Code": "982",
+    "Service ID": "47562",
+    "Service Description": "Laparoscopic Cholecystectomy",
+    "Gross Charge": "1,924.30",
+    "Discounted Cash Price": "1,924.30",
+    "Minimum Negotiated Charge": "1,481.71",
+    "Maximum Negotiated Charge": "1,866.57",
+    "Avera Health Plans PPO": "1,731.87",
+    "Cigna PPO": "1,866.57",
+    "Dakota Care DAS": "1,808.84",
+    "Healthpartners": "1,828.09",
+    "Medica PPO": "1,524.05",
+    "Midlands Choice, Inc.": "1,866.57",
+    "MultiPlan": "1,866.57",
+    "Preferred One": "1,866.57",
+    "Sanford Health Plans": "1,828.09",
+    "United Healthcare PPO": "1,635.66",
+    "Christian Health Minstries": "1,693.38",
+    "Unified Group/F.P.": "1,635.66",
+    "United Healthcare/FFC": "1,481.71"
+   }
+  },
+  {
+   "id": "A.r3",
+   "line": 29700,
+   "kind": "code_match",
+   "cells": {
+    "col0": "Chargemaster",
+    "Item Number": "92F1407",
+    "Revenue Code": "982",
+    "Service ID": "47562",
+    "Service Description": "Laparoscopy cholecystectomy",
+    "Gross Charge": "257.5",
+    "Discounted Cash Price": "257.5",
+    "Minimum Negotiated Charge": "198.28",
+    "Maximum Negotiated Charge": "249.78",
+    "Avera Health Plans PPO": "231.75",
+    "Cigna PPO": "249.78",
+    "Dakota Care DAS": "242.05",
+    "Healthpartners": "244.63",
+    "Medica PPO": "203.94",
+    "Midlands Choice, Inc.": "249.78",
+    "MultiPlan": "249.78",
+    "Preferred One": "249.78",
+    "Sanford Health Plans": "244.63",
+    "United Healthcare PPO": "218.88",
+    "Christian Health Minstries": "226.6",
+    "Unified Group/F.P.": "218.88",
+    "United Healthcare/FFC": "198.28"
+   }
+  },
+  {
+   "id": "A.r4",
+   "line": 32494,
+   "kind": "code_match",
+   "cells": {
+    "col0": "Chargemaster",
+    "Item Number": "9001407",
+    "Service ID": "47562",
+    "Service Description": "Laparoscopy cholecystectomy",
+    "Gross Charge": "2,757.00",
+    "Discounted Cash Price": "2,757.00",
+    "Minimum Negotiated Charge": "2,183.54",
+    "Maximum Negotiated Charge": "2,343.45",
+    "Medica PPO": "2,183.54",
+    "United Healthcare PPO": "2,343.45"
+   }
+  },
+  {
+   "id": "A.k1",
+   "line": 29623,
+   "kind": "keyword_match",
+   "cells": {
+    "col0": "Chargemaster",
+    "Item Number": "9201408",
+    "Revenue Code": "982",
+    "Service ID": "47563",
+    "Service Description": "Lap Cholecystectomy/Graph",
+    "Gross Charge": "7,089.49",
+    "Discounted Cash Price": "7,089.49",
+    "Minimum Negotiated Charge": "5,458.91",
+    "Maximum Negotiated Charge": "6,876.81",
+    "Avera Health Plans PPO": "6,380.54",
+    "Cigna PPO": "6,876.81",
+    "Dakota Care DAS": "6,664.12",
+    "Healthpartners": "6,735.02",
+    "Medica PPO": "5,614.88",
+    "Midlands Choice, Inc.": "6,876.81",
+    "MultiPlan": "6,876.81",
+    "Preferred One": "6,876.81",
+    "Sanford Health Plans": "6,735.02",
+    "United Healthcare PPO": "6,026.07",
+    "Christian Health Minstries": "6,238.75",
+    "Unified Group/F.P.": "6,026.07",
+    "United Healthcare/FFC": "5,458.91"
+   }
+  },
+  {
+   "id": "A.k2",
+   "line": 29701,
+   "kind": "keyword_match",
+   "cells": {
+    "col0": "Chargemaster",
+    "Item Number": "92F1408",
+    "Revenue Code": "982",
+    "Service ID": "47563",
+    "Service Description": "Lap Cholecystectomy/Graph",
+    "Gross Charge": "257.5",
+    "Discounted Cash Price": "257.5",
+    "Minimum Negotiated Charge": "198.28",
+    "Maximum Negotiated Charge": "249.78",
+    "Avera Health Plans PPO": "231.75",
+    "Cigna PPO": "249.78",
+    "Dakota Care DAS": "242.05",
+    "Healthpartners": "244.63",
+    "Medica PPO": "203.94",
+    "Midlands Choice, Inc.": "249.78",
+    "MultiPlan": "249.78",
+    "Preferred One": "249.78",
+    "Sanford Health Plans": "244.63",
+    "United Healthcare PPO": "218.88",
+    "Christian Health Minstries": "226.6",
+    "Unified Group/F.P.": "218.88",
+    "United Healthcare/FFC": "198.28"
+   }
+  },
+  {
+   "id": "A.k3",
+   "line": 31950,
+   "kind": "keyword_match",
+   "cells": {
+    "col0": "Chargemaster",
+    "Item Number": "2502199",
+    "Service ID": "74290",
+    "Service Mod1": "TC",
+    "Service Description": "Contrast X-Ray Gallbladder",
+    "Gross Charge": "166",
+    "Discounted Cash Price": "166",
+    "Minimum Negotiated Charge": "131.47",
+    "Maximum Negotiated Charge": "141.1",
+    "Medica PPO": "131.47",
+    "United Healthcare PPO": "141.1"
+   }
+  }
+ ],
+ "common": {},
+ "header": [
+  "",
+  "Item Number",
+  "Revenue Code",
+  "Service ID",
+  "Service Mod1",
+  "Service Mod2",
+  "Service Mod3",
+  "Service Mod4",
+  "Service Description",
+  "Gross Charge",
+  "Discounted Cash Price",
+  "Minimum Negotiated Charge",
+  "Maximum Negotiated Charge",
+  "Avera Health Plans PPO",
+  "Blue Cross Blue Shield of SD Wellmark PPO",
+  "Blue Cross Blue Shield Federal",
+  "Blue Cross Blue Shield Medicaid Replacement",
+  "Blue Cross Blue Shield Medicare Advantage",
+  "Cigna PPO",
+  "Dakota Care DAS",
+  "State Dakota Care",
+  "Healthpartners",
+  "Humana Medicare Replacement",
+  "Medica PPO",
+  "Midlands Choice, Inc.",
+  "MultiPlan",
+  "Preferred One",
+  "Sanford Health Plans",
+  "United Healthcare PPO",
+  "Christian Health Minstries",
+  "Unified Group/F.P.",
+  "United Healthcare/FFC"
+ ],
+ "trace": [
+  {
+   "kind": "thought",
+   "text": "I'll search the Brookings Hospital price file for CPT 47562 (laparoscopic cholecystectomy)."
+  },
+  {
+   "kind": "tool",
+   "name": "search_price_file",
+   "input": {
+    "hospital_id": "brookings",
+    "code": "47562",
+    "code_system": "CPT",
+    "description_keywords": "laparoscopic cholecystectomy gallbladder"
+   },
+   "summary": "34,350 records, 8 MB scanned, 7 rows kept",
+   "ms": 142
+  },
+  {
+   "kind": "thought",
+   "text": "I found CPT 47562 in the Brookings Hospital file. There are multiple rows for this code with different item numbers and significantly different prices. Let me analyze what's here:\n\n- **A.r1 & A.r2** (Item 9201407): $1,924.30 - appears to be duplicate rows\n- **A.r3** (Item 92F1407): $257.50 - much lower, same revenue code 982\n- **A.r4** (Item 9001407): $2,757.00 - highest price, but only has Medica and UHC rates\n\nAll rows show revenue code 982, which is a **professional fee** revenue code (96x, 9"
+  },
+  {
+   "kind": "tool",
+   "name": "record_extraction",
+   "input": {
+    "status": "unusable",
+    "scope": "component_only"
+   },
+   "summary": "status unusable, quote scope component_only",
+   "ms": 0
+  }
+ ],
+ "agentMs": 24121,
+ "confidenceDetail": {
+  "level": "low",
+  "reasons": [
+   "Only component fees found, not a whole-procedure price",
+   "The file carries no update date, so it may be stale",
+   "4 data-quality problem(s) noted"
+  ],
+  "file_updated": null
+ }
+}

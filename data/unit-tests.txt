@@ -1,0 +1,17 @@
+
+> pre-price-lambda@1.0.0 test
+> node --test test/*.test.mjs
+
+✔ zero plan sums exactly to quote and has equal instalments (1.002018ms)
+✔ card plan at 26.99% costs more than the principal (0.169038ms)
+✔ patient share respects deductible, coinsurance and OOP max (0.894851ms)
+✔ refuses component-only and ungrounded extractions (0.276873ms)
+✔ self-pay quote from grounded facility total (0.119805ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 102.941047
