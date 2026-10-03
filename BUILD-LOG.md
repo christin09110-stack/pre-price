@@ -7,7 +7,7 @@
 - big-file path: Wentworth-Douglass (MGB) 66.7MB zip -> 402MB pipe-delimited txt, server throttled ~0.3MB/s; streaming unzip + auto delimiter sniff + regex-jump CSV parser added
 
 ## UI iteration log (screenshots in shots/rN/, never deleted)
-- r1 (broken): wrong server on the port (another project's app on :5199, caught from the screenshot), primary buttons rendered with no text (a dark-mode link-colour rule beat .btn.primary), menu button showed at desktop width. SCORE 4/10.
+- r1 (broken): wrong server on the port (:5199 was already in use, caught from the screenshot), primary buttons rendered with no text (a dark-mode link-colour rule beat .btn.primary), menu button showed at desktop width. SCORE 4/10.
 - r2: fixed those. Comparison panel strong at 1280 and 360. Quote page fine. Faults: staggered panels in grids (.panel + .panel margin), refusal page showed a green "High confidence" badge that read as confidence in a price, raw ALL-CAPS file text as the page title, 5th card orphaned. SCORE 6/10.
 - r3: fixed grid alignment, confidence wording ("in this finding"), titles from friendly labels, card grid. Reviewer feedback then said the read screen was telemetry, with empty cards, a duplicated badge and a quota meter. SCORE 6.5/10.
 - r4: Read screen rebuilt: price, one trust line, "What this price does not cover" promoted, everything else behind "See how this was read"; quota meter removed; sandbox note moved to a footer line.
